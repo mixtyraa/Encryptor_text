@@ -1,0 +1,8 @@
+D:\Projects\Studies\Encryptor_text\sources\gui\bin\Debug\GUI_encryptor.exe
+D:\Projects\Studies\Encryptor_text\sources\gui\bin\Debug\GUI_encryptor.pdb
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.csprojResolveAssemblyReference.cache
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.Form1.resources
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.Properties.Resources.resources
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.csproj.GenerateResource.Cache
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.exe
+D:\Projects\Studies\Encryptor_text\sources\gui\obj\Debug\GUI_encryptor.pdb
