@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.source_text = new System.Windows.Forms.TextBox();
+            this.processed_text = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,21 +38,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // source_text
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(445, 371);
-            this.textBox1.TabIndex = 0;
+            this.source_text.Location = new System.Drawing.Point(15, 50);
+            this.source_text.Multiline = true;
+            this.source_text.Name = "source_text";
+            this.source_text.Size = new System.Drawing.Size(445, 371);
+            this.source_text.TabIndex = 0;
             // 
-            // textBox2
+            // processed_text
             // 
-            this.textBox2.Location = new System.Drawing.Point(475, 50);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(445, 371);
-            this.textBox2.TabIndex = 1;
+            this.processed_text.Location = new System.Drawing.Point(475, 50);
+            this.processed_text.Multiline = true;
+            this.processed_text.Name = "processed_text";
+            this.processed_text.Size = new System.Drawing.Size(445, 371);
+            this.processed_text.TabIndex = 1;
             // 
             // textBox3
             // 
@@ -69,6 +69,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "зашифровать";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.encrypt_Click);
             // 
             // comboBox1
             // 
@@ -86,7 +87,6 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Шифр:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -105,6 +105,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "расшифровать";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.encrypt_Click);
             // 
             // Form1
             // 
@@ -117,8 +118,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.processed_text);
+            this.Controls.Add(this.source_text);
             this.Name = "Form1";
             this.Text = "Шифратор";
             this.ResumeLayout(false);
@@ -128,8 +129,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox source_text;
+        private System.Windows.Forms.TextBox processed_text;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
