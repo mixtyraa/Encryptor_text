@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<encryptors>
+  <encryptor>
+    <name>Шифр Цезаря</name>
+    <path>encrypt/ROT.py</path>
+  </encryptor>
+  <encryptor>
+    <name>TEST</name>
+    <path>encrypt/Test.txt</path>
+  </encryptor>
+</encryptors>
