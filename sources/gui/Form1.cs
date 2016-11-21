@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
 
 namespace GUI_encryptor
 {
@@ -13,12 +15,14 @@ namespace GUI_encryptor
     public partial class Form1 : Form
     {
         List<Encryptor> ListEncryptors = new List<Encryptor>();
+        
 
         public Form1()
         {
             InitializeComponent();
             LoadListEncryptors();
         }
+
 
         private void LoadListEncryptors()
         {
@@ -45,18 +49,15 @@ namespace GUI_encryptor
             comboBox1.ValueMember = "path";
         }
 
-        private void encrypt_Click(object sender, EventArgs e)
+
+        private void source_text_TextChanged(object sender, EventArgs e)
         {
-            if (sender == button1)
-            {
-                //source_text.Text += comboBox1.SelectedValue;
-
-            }
-
-            if (sender == button2)
-            {
-                //source_text.Text += comboBox1.SelectedValue;
-            }
+            ScriptEngine engine = Python.CreateEngine();
+            ScriptScope scope = engine.CreateScope();
+            engine.ExecuteFile(comboBox1.SelectedValue.ToString(), scope);
+            dynamic ProccessCrypt = scope.GetVariable("ProccessCrypt");
+            dynamic result = ProccessCrypt(source_text.Text, text_key.Text, rb_encrypt.Checked);
+            processed_text.Text = result.ToString();
         }
     }
 
